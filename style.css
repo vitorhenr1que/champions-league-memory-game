@@ -26,13 +26,14 @@ body h1 {
   row-gap: 1rem;
   -moz-column-gap: 3rem;
        column-gap: 3rem;
-  width: 100%;
-  max-width: 800px;
+  width: 90%;
+  max-width: 600px;
+  height: 600px;
 }
 .card-container .card {
   position: relative;
   width: 100%;
-  height: 200px;
+  height: 100%;
   transition: all 400ms ease;
   transform-style: preserve-3d;
   cursor: pointer;
