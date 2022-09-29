@@ -1,0 +1,170 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", "sans-serif";
+}
+
+body {
+  height: 100vh;
+  background-image: url("./assets/bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+body h1 {
+  color: white;
+}
+
+.card-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  row-gap: 1rem;
+  -moz-column-gap: 3rem;
+       column-gap: 3rem;
+  width: 100%;
+  max-width: 800px;
+}
+.card-container .card {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  transition: all 400ms ease;
+  transform-style: preserve-3d;
+  cursor: pointer;
+}
+.card-container .card .face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  /*width: 100%;
+  height: 100%;*/
+  background-size: cover;
+  background-position: center;
+  transition: all 1s ease;
+}
+.card-container .card .front {
+  transform: rotateY(180deg);
+}
+.card-container .card .back {
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+}
+
+.reveal-card {
+  transform: rotateY(180deg);
+}
+
+.disable-card {
+  filter: saturate(0);
+  opacity: 0.7;
+}
+
+footer {
+  margin-top: 20px;
+}
+
+#fade {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(30, 30, 30, 0.6);
+}
+
+#modal {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 500px;
+  height: 500px;
+  max-width: 90%;
+  z-index: 10;
+  border-radius: 25px;
+  background-image: url("./assets/images/ucl.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  box-shadow: 5px 5px 5px 3px rgba(0, 0, 0, 0.2);
+}
+#modal .modal-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+}
+#modal .modal-header h2 {
+  color: white;
+}
+#modal .modal-header .close-modal {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: none;
+  cursor: pointer;
+  border: none;
+}
+#modal .modal-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+#modal .modal-body img {
+  -webkit-animation: champion 1s forwards;
+          animation: champion 1s forwards;
+  position: relative;
+  width: 40%;
+}
+#modal .modal-body .restart {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  font-size: 14px;
+  width: 200px;
+  padding: 10px;
+  background-color: rgb(45, 179, 45);
+  transition: all 400ms ease;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+#modal .modal-body .restart:hover {
+  background-color: green;
+}
+@-webkit-keyframes champion {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes champion {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+#fade, #modal {
+  transition: 0.5s ease;
+  opacity: 1;
+  pointer-events: all;
+}
+
+.hide {
+  display: none;
+  opacity: 0;
+  pointer-events: none;
+}/*# sourceMappingURL=style.css.map */
