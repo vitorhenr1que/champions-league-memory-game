@@ -10,7 +10,7 @@
 ## 📝 Descrição 
 
 Teste sua memória se divertindo com os principais times da Champions League
--  [https://consumindo-api-github-five.vercel.app/](consumindo-api-github-five.vercel.app/)
+-  [consumindo-api-github-five.vercel.app/](https://consumindo-api-github-five.vercel.app/)
 
 ## 🚀 Tecnologias
 
