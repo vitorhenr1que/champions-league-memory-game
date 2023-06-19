@@ -2,7 +2,7 @@
   Jogo da Memória - UEFA Champions League
 </h1>
 
-![Jogo da Memória](https://user-images.githubusercontent.com/85037374/193157408-dedd77be-c051-4b4c-bd15-5e22f99f3bf3.png)
+![Jogo da Memória](https://champions-league-memory-game.vercel.app/)
 
 <br>
 <br>
